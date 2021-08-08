@@ -1,0 +1,68 @@
+{
+  "name": "vue-app-base",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "webpack-dev-server --config webpack.dev.js --open",
+    "build": "webpack --config webpack.prod.js",
+    "lint": "eslint .",
+    "fix": "eslint --fix ."
+  },
+  "pre-commit": [
+    "fix",
+    "lint"
+  ],
+  "dependencies": {
+    "@babel/runtime": "^7.14.8",
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@vue/cli-plugin-babel": "^4.5.13",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "css-loader": "5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-vue": "^7.15.1",
+    "file-loader": "4.2.0",
+    "html-webpack-plugin": "4.5.2",
+    "less": "^4.1.1",
+    "less-loader": "6.0.0",
+    "postcss-loader": "^6.1.1",
+    "pre-commit": "^1.2.2",
+    "style-loader": "^3.2.1",
+    "url-loader": "^4.1.1",
+    "vue-loader": "15.0.0",
+    "vue-style-loader": "^4.1.3",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^4.46.0",
+    "webpack-cli": "3.3",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
